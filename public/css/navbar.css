@@ -1,0 +1,27 @@
+#navbar1{
+    background-color: #3a5339;
+}
+#img1{
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+}
+#tulisan{
+    font-size: 16px;
+    margin-left: 120px;
+}
+#search{
+    margin-left: 100px;
+}
+#beranda{
+    margin-right: 80px;
+}
+#sejarah{
+    margin-right: 80px;
+}
+#berita{
+    margin-right: 80px;
+}
+#pengurus{
+    margin-right: 80px;
+}
