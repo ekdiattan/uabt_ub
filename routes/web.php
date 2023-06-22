@@ -1,7 +1,9 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-// Routing Templae Pisah
+
+use App\Http\Controllers\UserController;
+
+
 Route::get('/', function () {
     return view('/index');
 });
@@ -14,7 +16,6 @@ Route::get('/navbar', function () {
 Route::get('/footer', function () {
     return view('/alltemplate/footer');
 });
-// Routing Pages
 Route::get('/berita', function () {
     return view('/pages/berita');
 });
@@ -27,3 +28,10 @@ Route::get('/sejarah', function () {
 Route::get('/login', function () {
     return view('/login/login');
 });
+Route::get('/daftar', function () {
+    return view('/login/daftar');
+});
+
+Route::post('/formdaftar', [UserController::class, 'store']);
+Route::get('/getdaftar', [UserController::class, 'index'])->name('daftar');
+
