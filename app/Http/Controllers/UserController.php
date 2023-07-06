@@ -13,7 +13,6 @@ class UserController extends Controller
         return view('daftar');
     }
     public function store(Request $request){
-       
         $validatedDate = $request->validate([
             'name' => 'required|string',
             'nim' => 'required|string',
@@ -29,7 +28,6 @@ class UserController extends Controller
             'fakultas' => 'required|string',
             'email' => 'required|string',
             'password' => 'required|string',
-
         ]);
         return redirect('/daftar');
     }

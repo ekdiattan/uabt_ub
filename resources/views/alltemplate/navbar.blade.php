@@ -14,7 +14,9 @@
     <nav class="navbar navbar-expand" id="navbar1">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
-                <img src="/img/logouabt.png" alt="class=" d-inline-block align-text-top" id="img1">
+                <a href="/">
+                    <img src="/img/logouabt.png" alt="class=" d-inline-block align-text-top" id="img1" >
+                </a>
                 <ul class="navbar-nav" id="tulisan">
                     <li class="nav-item" id="beranda">
                         <a class="nav-link" aria-current="page" href="/" style="color: white;">Beranda</a>
@@ -29,7 +31,7 @@
                         <a class="nav-link" href="/pengurus" style="color: white;">Pengurus</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login" style="color: white;">Login</a>
+                        <a class="nav-link" href="/login" style="color: white;">Daftar</a>
                     </li>
                     <form class="d-flex" role="search" id="search">
                         <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
