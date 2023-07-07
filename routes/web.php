@@ -29,7 +29,11 @@ Route::get('/login', function () {
     return view('/login/login');
 });
 
+Route::get('/dashboardadmin', function(){return view('/pengurus/dashboard');});
+
 // Controller User
 Route::get('/daftar', function () {return view('/login/daftar');});
+Route::get('/daftaranggota',function () {return view('/login/daftaranggota');});
 Route::post('/daftar', [UserController::class, 'store']);
+
 

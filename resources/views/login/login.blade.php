@@ -27,7 +27,9 @@
             <a class="btn btn-primary" href="/" role="button">Login</a>
             <br>
             <div id="emailHelp" class="form-text" name="tulisan">Belum punya akun?</div>
-            <a class="btn btn-danger" href="/daftar" role="button">Daftar</a>
+            <a class="btn btn-danger" href="/daftar" role="button">Daftar Akun</a>
+            <div id="emailHelp" class="form-text" name="tulisan">Daftar Menjadi Anggota UABT?</div>
+            <a class="btn btn-danger" href="/daftar" role="button">Daftar Anggota Sekarang!</a>
     </div>
     </form>
     <!-- End Login -->

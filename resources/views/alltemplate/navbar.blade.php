@@ -31,7 +31,7 @@
                         <a class="nav-link" href="/pengurus" style="color: white;">Pengurus</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login" style="color: white;">Daftar</a>
+                        <a class="nav-link" href="/login" style="color: white;">Login/Daftar</a>
                     </li>
                     <form class="d-flex" role="search" id="search">
                         <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
