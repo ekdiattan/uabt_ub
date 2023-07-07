@@ -14,7 +14,7 @@ class UserController extends Controller
     }
     public function store(Request $request){
         $validatedDate = $request->validate([
-            'name' => 'required|string',
+            'nama' => 'required|string',
             'nim' => 'required|string',
             'prodi' => 'required|string',
             'fakultas' => 'required|string',
@@ -22,12 +22,13 @@ class UserController extends Controller
             'password' => 'required|string',
         ]);
         User::create([
-            'name' => 'required|string',
-            'nim' => 'required|string',
-            'prodi' => 'required|string',
-            'fakultas' => 'required|string',
-            'email' => 'required|string',
-            'password' => 'required|string',
+            'nama' => $request->nama,
+            'nim' => $request->nim,
+            'prodi' => $request->prodi,
+            'fakultas' => $request->fakultas,
+            'email' => $request->email,
+            'password' => $request->password,
+            'hak_akses' => 'Anggota',
         ]);
         return redirect('/daftar');
     }

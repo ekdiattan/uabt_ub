@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form action="/formdaftar" method="POST" enctype="multipart/form-data">
+    <form action="/daftar" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nama</label>

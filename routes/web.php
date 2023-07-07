@@ -28,10 +28,8 @@ Route::get('/sejarah', function () {
 Route::get('/login', function () {
     return view('/login/login');
 });
-Route::get('/daftar', function () {
-    return view('/login/daftar');
-});
 
-Route::post('/formdaftar', [UserController::class, 'store']);
-Route::get('/getdaftar', [UserController::class, 'index'])->name('daftar');
+// Controller User
+Route::get('/daftar', function () {return view('/login/daftar');});
+Route::post('/daftar', [UserController::class, 'store']);
 
