@@ -9,33 +9,31 @@
 
 </head>
 <body>
-    <form action="/daftar" method="POST" enctype="multipart/form-data">
-        @csrf
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="nama" name="nama">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">NIM</label>
-            <input type="text" class="form-control" id="nim" name="nim">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Fakultas</label>
-            <input type="text" class="form-control" id="fakultas" name="fakultas">
+    <div class="container">
+        <form action="/daftar" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama">
             </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Prodi</label>
-            <input type="text" class="form-control" id="prodi" name="prodi">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="text" class="form-control" id="email" name="email">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Password</label>
-            <input type="text" class="form-control" id="password" name="password">
-        </div>
-        <button type="submit" class="btn btn-primary">Daftar</button>
-    </form>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">NIM</label>
+                <input type="text" class="form-control" id="nim" name="nim">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Prodi</label>
+                <input type="text" class="form-control" id="hak_akses" name="hak_akses">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input type="text" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Daftar</button>
+        </form>
+    </div>
 </body>
 </html>
