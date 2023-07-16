@@ -34,10 +34,10 @@ Route::get('/dashboardadmin', function(){return view('/pengurus/dashboard');});
 // Controller User
 Route::get('/daftar', function () {return view('/login/daftar');});
 Route::post('/daftar', [UserController::class, 'store']);
-Route::get('/login', function () {return view('/login/login');});
-Route::post('/login', [ UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'index']);
+Route::post('/login', [ UserController::class, 'authenticate']);
 
-// Anggota
+// Controller Anggota
 Route::get('/daftaranggota',function () {return view('/login/daftaranggota');});
 Route::post('/daftaranggota', [AnggotaController::class, 'store']);
 

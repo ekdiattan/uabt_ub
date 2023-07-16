@@ -15,17 +15,17 @@
     <!-- Login -->
     <img src="/img/logouabt.png" alt="Image" class="image1">
     <div class="container" id="rata-tengah">
-        <form action="/login" method="post" enctype="multipart/form-data">
+        <form action="/login" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Gunakan akun @student.ub.ac.id" name="email">
+                <input type="email" name="email" class="form-control" placeholder="Gunakan akun @student.ub.ac.id" >
             </div>
             <div class="mb-3 ">
                 <label for="exampleInputPassword1" class="form-label">Kata Sandi</label>
                 <input type="password" class="form-control" name="password">
             </div>
-            <a class="btn btn-primary" href="/" role="button">Login</a>
+            <button class="btn btn-primary" type="submit">Masuk</button>
         </form>
             <br>
             <div id="emailHelp" class="form-text" name="tulisan">Belum punya akun?</div>

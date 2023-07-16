@@ -14,8 +14,6 @@
     <div class="container">
         <form action="/daftaranggota" method="POST" enctype="multipart/form-data">
             @csrf
-<!-- <div class="card"> -->
-            
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Nama</label>
                 <input type="text" class="form-control" id="nama" name="nama" value="{{ old('nama') }}">
@@ -63,9 +61,6 @@
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Daftar</button>
-            <button type="submit" class="btn btn-primary disabled">Create...
-
-            </button>
                 @if (session('success'))
                     <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
