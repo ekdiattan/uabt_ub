@@ -24,7 +24,6 @@ class AnggotaController extends Controller
             session()->flash('error2', 'NIM anda sudah terdaftar sebagai anggota UABT!');
             return redirect()->back();
         }
-
         $validatedDate = $request->validate([
             'nama'=> 'required|string',
             'email'=> 'required|string',

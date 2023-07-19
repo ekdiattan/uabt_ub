@@ -15,7 +15,8 @@ class AddColumn extends Migration
     {
         
         Schema::table('users', function(Blueprint $table){
-            $table->dropColumn('hak_akses')->nullable();
+            $table->dropColumn('nama')->nullable();
+            $table->dropColumn('nim')->nullable();
 
 
         });

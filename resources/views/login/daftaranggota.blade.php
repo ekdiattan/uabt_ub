@@ -8,7 +8,6 @@
     <title>UABT UB | Daftar Anggota</title>
     <link rel="icon" type="image/x-icon" href="/img/logouabt.png">
     <link rel="stylesheet" href="{{asset('/css/daftaranggota.css')}}">
-
 </head>
 <body id="body">
     <div class="container">

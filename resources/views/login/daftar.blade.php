@@ -12,7 +12,7 @@
     <div class="container">
         <form action="/daftar" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="mb-3">
+            <!-- <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Nama</label>
                 <input type="text" class="form-control" id="nama" name="nama">
             </div>
@@ -23,13 +23,16 @@
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Prodi</label>
                 <input type="text" class="form-control" id="hak_akses" name="hak_akses">
+            </div> -->
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" >Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Gunakan akun @student.ub.ac.id" value="{{ old('email') }}">
+                    @if (session('error'))
+                        <div class="alert alert-danger">{{ session('error') }}</div>
+                    @endif
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" name="email">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <label for="exampleFormControlInput1" class="form-label">Buat Kata Sandi</label>
                 <input type="text" class="form-control" id="password" name="password">
             </div>
             <button type="submit" class="btn btn-primary">Daftar</button>
