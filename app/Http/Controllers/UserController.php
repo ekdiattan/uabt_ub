@@ -18,6 +18,9 @@ class UserController extends Controller
     public function index(){
         return view('/login/login');
     }
+    public function daftar(){
+        return view('/login/daftar');
+    }
     public function store(Request $request){
 
         $anggota=Anggota::where('email', $request->email)->first();
@@ -31,18 +34,12 @@ class UserController extends Controller
             return redirect()->back();
         }
         $validatedDate = $request->validate([
-            // 'nama' => 'required|string',    
-            // 'nim' => 'required|string',
             'email' => 'required|string',
             'password' => 'required|string',
-            // 'hak_akses' => 'required|string',
         ]);
         User::create([
-            // 'nama' => $request->nama,
-            // 'nim' => $request->nim,
             'email' => $request->email,
             'password' => $request->password,
-            // 'hak_akses' => $request->hak_akses,
         ]);
         Mail::to("hadyanyuma@student.ub.ac.id")->send(new EmailMessage());
         session()->flash('success', 'Akun anda berhasil dibuat!');
@@ -52,17 +49,16 @@ class UserController extends Controller
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
+            'email' => ['required', 'max:255'],
+            'password' => ['required', 'max:100', 'min:6'],
         ]);
-        
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->intended('/sejarah');
         }
-        
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'email' => 'Password salah',
         ])->onlyInput('email');
+        dd('berhasil');
     }
 }

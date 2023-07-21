@@ -13,10 +13,17 @@ class AddTable extends Migration
      */
     public function up()
     {
-        Schema::create('anggotas', function(Blueprint $table){
+        Schema::create('pengurus', function(Blueprint $table){
             $table->string('nama');
+            $table->string('email');
             $table->string('nim');
-
+            $table->string('fakultas');
+            $table->string('prodi');
+            $table->string('angkatan');
+            $table->string('alamat');
+            $table->string('nohp');
+            $table->string('jeniskelamin');
+            $table->string('divisi');
         });
     }
 

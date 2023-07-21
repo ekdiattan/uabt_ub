@@ -14,7 +14,7 @@
         <form action="/daftaranggota" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Nama</label>
+            <label for="exampleFormControlInput1" class="form-label">Nama</label>
                 <input type="text" class="form-control" id="nama" name="nama" value="{{ old('nama') }}">
             </div>
             <div class="mb-3">
