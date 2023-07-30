@@ -31,9 +31,6 @@ Route::get('/pengurus', function () {
 Route::get('/sejarah', function () {
     return view('/pages/sejarah');
 });
-Route::get('/login2', function () {
-    return view('/login/login2');
-});
 
 
 Route::get('/dashboardadmin', function(){return view('/pengurus/dashboard');});
@@ -49,5 +46,6 @@ Route::get('/daftaranggota',function () {return view('/login/daftaranggota');});
 Route::post('/daftaranggota', [AnggotaController::class, 'store']);
 
 // Pengurus
-Route::get('/datapengurus', [UserController::class, 'index']);
+Route::get('/loginadmin', [PengurusController::class, 'index']);
+Route::get('/dashboardadmin', [PengurusController::class, 'dashboardadmin']);
 
